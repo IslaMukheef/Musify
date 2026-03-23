@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Musify.Views.Library"
+             Title="Library"
+             BackgroundColor="ForestGreen">
+
+    <Grid RowDefinitions="Auto, *"
+                 ColumnDefinitions="*,*">
+        <CollectionView Grid.Row="0" Grid.ColumnSpan="2" x:Name="LibraryListView" ItemsSource="{Binding PlayList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Border BackgroundColor="Gray" Margin="10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14"/>
+                            </Border.StrokeShape>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Stroke="
+                                        White" Grid.RowSpan="2"
+                                         WidthRequest="60"
+                                         HeightRequest="60"
+                                         HorizontalOptions="Start"
+                                         Fill="WhiteSmoke"  
+                                         StrokeThickness="1"
+                                         Margin="0,0,10,0"/>
+                                <Label Grid.Column="1" TextColor="White"
+                                       Text="{Binding PlayListName}"
+                                       FontAttributes="Bold"/>
+                                <Label Grid.Row="1" TextColor="White"
+                                       Grid.Column="1"
+                                       Text="{Binding PlayListID}"
+                                       FontAttributes="Italic"
+                                       VerticalOptions="End"/>
+                            </Grid>
+                        </Border>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Row="1" 
+                Grid.Column="1"
+                Text="Back" 
+                Clicked="OnBackButtonClicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        <Label Text="SOME TEXT"></Label>
+        <StackLayout Grid.Row="1" Grid.Column="1">
+            <Label Text="Welcome to the Library!"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

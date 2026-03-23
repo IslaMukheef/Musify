@@ -1,9 +1,13 @@
-﻿namespace Musify;
+﻿using Musify.Models;
+
+namespace Musify;
 
 public partial class AppShell : Shell
 {
 	public AppShell()
 	{
 		InitializeComponent();
-	}
+        
+
+    }
 }

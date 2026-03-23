@@ -1,4 +1,7 @@
-﻿namespace Musify;
+﻿using Musify.Models;
+using Musify.Views;
+
+namespace Musify;
 
 public partial class MainPage : ContentPage
 {
@@ -20,4 +23,8 @@ public partial class MainPage : ContentPage
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
 	}
+    private async void OnNavigateButtonClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.Library());
+    }
 }

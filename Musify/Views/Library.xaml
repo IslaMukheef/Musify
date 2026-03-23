@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Musify.Views.Library"
-             Title="Library"
-             BackgroundColor="ForestGreen">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="black">
 
     <Grid RowDefinitions="Auto, *"
                  ColumnDefinitions="*,*">
@@ -11,7 +11,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <ContentView>
-                        <Border BackgroundColor="Gray" Margin="10">
+                        <Border BackgroundColor="#332433" Margin="10">
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="14"/>
                             </Border.StrokeShape>
@@ -24,14 +24,16 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <Ellipse Stroke="
-                                        White" Grid.RowSpan="2"
-                                         WidthRequest="60"
-                                         HeightRequest="60"
-                                         HorizontalOptions="Start"
-                                         Fill="WhiteSmoke"  
-                                         StrokeThickness="1"
-                                         Margin="0,0,10,0"/>
+                                <Border  
+                                        Stroke="White"
+                                        StrokeThickness="1"
+                                        WidthRequest="60"
+                                        HeightRequest="60"
+                                        StrokeShape="RoundRectangle 20"
+                                        Margin="5,5,10,5">
+                                    <Image Source="{Binding PlayListImage}"
+                                           Aspect="AspectFill"/>
+                                </Border>
                                 <Label Grid.Column="1" TextColor="White"
                                        Text="{Binding PlayListName}"
                                        FontAttributes="Bold"/>
@@ -52,11 +54,7 @@
                 Clicked="OnBackButtonClicked"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-        <Label Text="SOME TEXT"></Label>
-        <StackLayout Grid.Row="1" Grid.Column="1">
-            <Label Text="Welcome to the Library!"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-        </StackLayout>
+       
+     
     </Grid>
 </ContentPage>

@@ -14,8 +14,8 @@ namespace Musify.ViewModels
         {
             PlayList = new ObservableCollection<PlayList>
         {
-            new PlayList("Chill Vibes", 1),
-            new PlayList("Workout Mix", 2)
+            new PlayList("Chill Vibes", 1,"dotnet_bot.png"),
+            new PlayList("Workout Mix", 2,"dotnet_bot.png")
         };
         }
     }

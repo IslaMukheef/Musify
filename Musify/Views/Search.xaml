@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Musify.Views.Search"
+             Title="Search"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1B1B1B">
+
+    <Grid>
+        <Label Text="This is the Search view"
+               TextColor="White"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </Grid>
+</ContentPage>

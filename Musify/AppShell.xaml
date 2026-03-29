@@ -3,13 +3,25 @@
     x:Class="Musify.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Musify"
+    xmlns:views="clr-namespace:Musify.Views"
     
     Title="Musify">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate views:Home}"
+            Route="Home" />
+
+        <ShellContent
+            Title="Search"
+            ContentTemplate="{DataTemplate views:Search}"
+            Route="Search" />
+
+        <ShellContent
+            Title="Library"
+            ContentTemplate="{DataTemplate views:Library}"
+            Route="Library" />
+    </TabBar>
 
 </Shell>

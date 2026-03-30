@@ -43,5 +43,55 @@
                        VerticalTextAlignment="Center" />
             </Border>
         </Grid>
+
+        <VerticalStackLayout Spacing="12">
+            <Label Text="To get you started"
+                   TextColor="White"
+                   FontSize="22"
+                   FontAttributes="Bold" />
+
+            <Grid ColumnDefinitions="*,*"
+                  ColumnSpacing="14">
+                <VerticalStackLayout Grid.Column="0"
+                                     Spacing="8">
+                    <Border BackgroundColor="#5B5B5B"
+                            StrokeThickness="0"
+                            HeightRequest="140">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14" />
+                        </Border.StrokeShape>
+                    </Border>
+
+                    <Label Text="Chill Mix"
+                           TextColor="White"
+                           FontSize="15"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Relaxed songs for studying"
+                           TextColor="#B8B8B8"
+                           FontSize="13" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1"
+                                     Spacing="8">
+                    <Border BackgroundColor="#5B5B5B"
+                            StrokeThickness="0"
+                            HeightRequest="140">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14" />
+                        </Border.StrokeShape>
+                    </Border>
+
+                    <Label Text="Top Tracks"
+                           TextColor="White"
+                           FontSize="15"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Popular songs from your library"
+                           TextColor="#B8B8B8"
+                           FontSize="13" />
+                </VerticalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

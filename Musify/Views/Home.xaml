@@ -7,142 +7,150 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#1B1B1B">
 
-    <VerticalStackLayout Padding="20,48,20,20"
-                         Spacing="12">
-        <Grid ColumnDefinitions="*,Auto"
-              ColumnSpacing="12">
-            <VerticalStackLayout Spacing="4">
-                <Label Text="Home"
+    <ScrollView>
+        <VerticalStackLayout Padding="20,48,20,20"
+                             Spacing="12">
+            <Grid ColumnDefinitions="*,Auto"
+                  ColumnSpacing="12">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Home"
+                           TextColor="White"
+                           FontSize="28"
+                           FontAttributes="Bold" />
+                </VerticalStackLayout>
+
+                <Border Grid.Column="1"
+                        BackgroundColor="#4A4A4A"
+                        StrokeThickness="0"
+                        WidthRequest="42"
+                        HeightRequest="42"
+                        HorizontalOptions="End"
+                        VerticalOptions="Start">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="21" />
+                    </Border.StrokeShape>
+
+                    <Label Text="P"
+                           TextColor="White"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                </Border>
+            </Grid>
+
+            <SearchBar x:Name="HomeSearchBar"
+                       Placeholder="Search songs or artists"
+                       BackgroundColor="#1B1B1B"
+                       HorizontalOptions="Fill" />
+
+            <VerticalStackLayout x:Name="GetStartedSection"
+                                 Spacing="12">
+                <Label Text="To get you started"
                        TextColor="White"
-                       FontSize="28"
+                       FontSize="22"
                        FontAttributes="Bold" />
+
+                <Grid ColumnDefinitions="*,*"
+                      ColumnSpacing="14">
+                    <VerticalStackLayout x:Name="ChillMixCard"
+                                         Grid.Column="0"
+                                         Spacing="8">
+                        <Border BackgroundColor="#5B5B5B"
+                                StrokeThickness="0"
+                                HeightRequest="140">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14" />
+                            </Border.StrokeShape>
+                        </Border>
+
+                        <Label Text="Chill Mix"
+                               TextColor="White"
+                               FontSize="15"
+                               FontAttributes="Bold" />
+
+                        <Label Text="Relaxed songs for studying"
+                               TextColor="#B8B8B8"
+                               FontSize="13" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout x:Name="TopTracksCard"
+                                         Grid.Column="1"
+                                         Spacing="8">
+                        <Border BackgroundColor="#5B5B5B"
+                                StrokeThickness="0"
+                                HeightRequest="140">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14" />
+                            </Border.StrokeShape>
+                        </Border>
+
+                        <Label Text="Top Tracks"
+                               TextColor="White"
+                               FontSize="15"
+                               FontAttributes="Bold" />
+
+                        <Label Text="Popular songs from your library"
+                               TextColor="#B8B8B8"
+                               FontSize="13" />
+                    </VerticalStackLayout>
+                </Grid>
             </VerticalStackLayout>
 
-            <Border Grid.Column="1"
-                    BackgroundColor="#4A4A4A"
-                    StrokeThickness="0"
-                    WidthRequest="42"
-                    HeightRequest="42"
-                    HorizontalOptions="End"
-                    VerticalOptions="Start">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="21" />
-                </Border.StrokeShape>
-
-                <Label Text="P"
+            <VerticalStackLayout x:Name="LibrarySection"
+                                 Spacing="12">
+                <Label Text="Discover something new"
                        TextColor="White"
-                       FontSize="16"
-                       FontAttributes="Bold"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center" />
-            </Border>
-        </Grid>
+                       FontSize="22"
+                       FontAttributes="Bold" />
 
-        <SearchBar x:Name="HomeSearchBar"
-                   Placeholder="Search songs or artists"
-                   BackgroundColor="#1B1B1B"
-                   HorizontalOptions="Fill" />
+                <Grid ColumnDefinitions="*,*"
+                      ColumnSpacing="14">
+                    <VerticalStackLayout x:Name="WorkoutPlaylistCard"
+                                         Grid.Column="0"
+                                         Spacing="8">
+                        <Border BackgroundColor="#5B5B5B"
+                                StrokeThickness="0"
+                                HeightRequest="140">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14" />
+                            </Border.StrokeShape>
+                        </Border>
 
-        <VerticalStackLayout Spacing="12">
-            <Label Text="To get you started"
-                   TextColor="White"
-                   FontSize="22"
-                   FontAttributes="Bold" />
+                        <Label Text="Indie Finds"
+                               TextColor="White"
+                               FontSize="15"
+                               FontAttributes="Bold" />
 
-            <Grid ColumnDefinitions="*,*"
-                  ColumnSpacing="14">
-                <VerticalStackLayout Grid.Column="0"
-                                     Spacing="8">
-                    <Border BackgroundColor="#5B5B5B"
-                            StrokeThickness="0"
-                            HeightRequest="140">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="14" />
-                        </Border.StrokeShape>
-                    </Border>
+                        <Label Text="Fresh tracks to check out"
+                               TextColor="#B8B8B8"
+                               FontSize="13" />
+                    </VerticalStackLayout>
 
-                    <Label Text="Chill Mix"
-                           TextColor="White"
-                           FontSize="15"
-                           FontAttributes="Bold" />
+                    <VerticalStackLayout x:Name="LateNightMixCard"
+                                         Grid.Column="1"
+                                         Spacing="8">
+                        <Border BackgroundColor="#5B5B5B"
+                                StrokeThickness="0"
+                                HeightRequest="140">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14" />
+                            </Border.StrokeShape>
+                        </Border>
 
-                    <Label Text="Relaxed songs for studying"
-                           TextColor="#B8B8B8"
-                           FontSize="13" />
-                </VerticalStackLayout>
+                        <Label Text="Artist Spotlight"
+                               TextColor="White"
+                               FontSize="15"
+                               FontAttributes="Bold" />
 
-                <VerticalStackLayout Grid.Column="1"
-                                     Spacing="8">
-                    <Border BackgroundColor="#5B5B5B"
-                            StrokeThickness="0"
-                            HeightRequest="140">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="14" />
-                        </Border.StrokeShape>
-                    </Border>
-
-                    <Label Text="Top Tracks"
-                           TextColor="White"
-                           FontSize="15"
-                           FontAttributes="Bold" />
-
-                    <Label Text="Popular songs from your library"
-                           TextColor="#B8B8B8"
-                           FontSize="13" />
-                </VerticalStackLayout>
-            </Grid>
+                        <Label Text="New artists worth exploring"
+                               TextColor="#B8B8B8"
+                               FontSize="13" />
+                    </VerticalStackLayout>
+                </Grid>
+            </VerticalStackLayout>
         </VerticalStackLayout>
-
-        <VerticalStackLayout Spacing="12">
-            <Label Text="Your library"
-                   TextColor="White"
-                   FontSize="22"
-                   FontAttributes="Bold" />
-
-            <Grid ColumnDefinitions="*,*"
-                  ColumnSpacing="14">
-                <VerticalStackLayout Grid.Column="0"
-                                     Spacing="8">
-                    <Border BackgroundColor="#5B5B5B"
-                            StrokeThickness="0"
-                            HeightRequest="140">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="14" />
-                        </Border.StrokeShape>
-                    </Border>
-
-                    <Label Text="Workout Playlist"
-                           TextColor="White"
-                           FontSize="15"
-                           FontAttributes="Bold" />
-
-                    <Label Text="Saved songs for the gym"
-                           TextColor="#B8B8B8"
-                           FontSize="13" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Column="1"
-                                     Spacing="8">
-                    <Border BackgroundColor="#5B5B5B"
-                            StrokeThickness="0"
-                            HeightRequest="140">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="14" />
-                        </Border.StrokeShape>
-                    </Border>
-
-                    <Label Text="Late Night Mix"
-                           TextColor="White"
-                           FontSize="15"
-                           FontAttributes="Bold" />
-
-                    <Label Text="Tracks you added recently"
-                           TextColor="#B8B8B8"
-                           FontSize="13" />
-                </VerticalStackLayout>
-            </Grid>
-        </VerticalStackLayout>
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

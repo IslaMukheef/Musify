@@ -14,11 +14,6 @@
             Route="Home" />
 
         <ShellContent
-            Title="Search"
-            ContentTemplate="{DataTemplate views:Search}"
-            Route="Search" />
-
-        <ShellContent
             Title="Library"
             ContentTemplate="{DataTemplate views:Library}"
             Route="Library" />

@@ -70,7 +70,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\LibraryView.xaml.cs">
+	    <DependentUpon>LibraryView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\PlayListView.xaml.cs">
+	    <DependentUpon>PlayListView.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\Home.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PlayListView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 
@@ -78,7 +90,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 
-	  <MauiXaml Update="Views\Library.xaml">
+	  <MauiXaml Update="Views\LibraryView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

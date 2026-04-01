@@ -9,7 +9,7 @@ public partial class Home : ContentPage
 
     private async void OnNavigateButtonClicked(object? sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Library());
+        await Navigation.PushAsync(new LibraryView());
     }
 
     private async void OnSearchButtonClicked(object? sender, EventArgs e)

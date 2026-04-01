@@ -15,7 +15,7 @@
 
         <ShellContent
             Title="Library"
-            ContentTemplate="{DataTemplate views:Library}"
+            ContentTemplate="{DataTemplate views:LibraryView}"
             Route="Library" />
     </TabBar>
 

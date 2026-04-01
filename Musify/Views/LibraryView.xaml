@@ -13,7 +13,7 @@
                         x:Name="LibraryListView"
                         ItemsSource="{Binding playlist}"
                         SelectionMode="Single"
-                        SelectedItem="{Binding SelectedPlayList, Mode=TwoWay}">
+                        SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <ContentView>
@@ -59,7 +59,7 @@
                                 <Label Grid.Row="1" TextColor="White"
                                        Grid.Column="1"
                                        VerticalOptions="Start"
-                                       Text="{Binding CreaterName}"
+                                       Text="{Binding CreatorName}"
                                        FontAttributes="Italic"
                                        />
                                  

@@ -13,16 +13,22 @@ namespace Musify.Models
         // this should not be mandatory as the user can set on or the system will set one by defualt
         public string PlayListImage { get; set; }
         // will store either the artist name or the person who created the playlist
-        public string CreaterName { get; set; }
+        public string CreatorName { get; set; }
         public ObservableCollection<Song> Songs { get; set; }
 
-        public PlayList(string playlistName, int playlistID,string playListImage, string createrName)
+        public PlayList(string playlistName, int playlistID,string playListImage, string creatorName)
         {
             PlayListName = playlistName;
             PlayListID = playlistID;
             PlayListImage = playListImage;
             Songs = new ObservableCollection<Song>();
-            CreaterName = createrName;
+            CreatorName = creatorName;
         }
+
+        
+        public void AddSongToPlaylist(Song song)
+        {
+            Songs.Add(song);
+        } 
     }
 }

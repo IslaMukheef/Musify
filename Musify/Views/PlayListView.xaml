@@ -2,11 +2,103 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Musify.Views.PlayListView"
-             Title="PlayList">
-    <VerticalStackLayout>
+                          NavigationPage.HasNavigationBar="False"
+             BackgroundColor="black">
+
+    <Grid RowDefinitions="Auto, auto, auto
+          "
+                 ColumnDefinitions="*,*">
+
+        <Image Grid.Row="0"
+               Grid.ColumnSpan="2"
+               Source="{Binding SelectedListImage}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               WidthRequest="400"
+               HeightRequest="400"
+               Margin="5"
+               Aspect="AspectFit"></Image>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+               Grid.ColumnSpan="2"
+               Grid.Row="1"
+               TextColor="White"
+               Margin="10">
+            <!--https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-10.0#use-formatted-text-->
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding CurrentPlayList.PlayListName}"
+                          FontAttributes="Bold">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnProfileTapped" NumberOfTapsRequired="1" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                    <Span Text="&#10;"/>
+                    <Span Text="{Binding CurrentPlayList.CreatorName}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <CollectionView Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding PlayListSongs}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedSong, Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Border BackgroundColor="#332433" Margin="10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14"/>
+                            </Border.StrokeShape>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnViewSongTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            </Border.GestureRecognizers>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border  
+                                        Stroke="White"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 20"
+                                        Margin="5,5,10,5" 
+                                        Grid.RowSpan="2"
+                                    Grid.Column="0">
+                                    <Image Source="{Binding SongImage}"
+                                           Aspect="AspectFit"
+                                           WidthRequest="30"
+                                           HeightRequest="30"
+                                           VerticalOptions="Center"/>
+                                </Border>
+                                <Label Grid.Column="1"
+                                       TextColor="White"
+                                       Text="{Binding Title}"
+                                       FontAttributes="Bold"
+                                       VerticalOptions="Center"
+                                       Grid.Row="0"
+                                       HorizontalOptions="Start"/>
+
+                                <Label Grid.Row="1" TextColor="White"
+                                       Grid.Column="1"
+                                       VerticalOptions="Start"
+                                       Text="{Binding ArtistName}"
+                                       FontAttributes="Italic"
+                                       />
+
+                            </Grid>
+                        </Border>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+    </Grid>
 </ContentPage>

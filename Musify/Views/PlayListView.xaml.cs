@@ -25,4 +25,9 @@ public partial class PlayListView : ContentPage
         //if (BindingContext is LibraryViewModel libraryView)
         //    await Navigation.PushAsync(new PlayListView(libraryView.SelectedPlaylist));
     }
+    private async void OnBackButtonTapped(object sender, TappedEventArgs args)
+    {
+        await Navigation.PopAsync();
+    }
+    
 }

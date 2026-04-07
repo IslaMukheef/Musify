@@ -5,10 +5,17 @@
                           NavigationPage.HasNavigationBar="False"
              BackgroundColor="black">
 
-    <Grid RowDefinitions="Auto, auto, auto
-          "
-                 ColumnDefinitions="*,*">
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Image Grid.Row="0"
                Grid.ColumnSpan="2"
                Source="{Binding SelectedListImage}"
@@ -97,8 +104,28 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
-
-
+        <Border Grid.Row="3"
+                Grid.Column="0"
+                BackgroundColor="AliceBlue"
+                Margin="10"
+                WidthRequest="100">
+            <Label Text="Back" TextColor="Black"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="14"/>
+            </Border.StrokeShape>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBackButtonTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+            </Border.GestureRecognizers>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1"  Margin="10" WidthRequest="40" HorizontalOptions="End" VerticalOptions="Center">
+            <Image Source="gray_heart.png" Aspect="AspectFit"/>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="14"/>
+            </Border.StrokeShape>
+            
+        </Border>
     </Grid>
 </ContentPage>

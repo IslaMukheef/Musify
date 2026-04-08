@@ -17,6 +17,11 @@
             Title="Library"
             ContentTemplate="{DataTemplate views:LibraryView}"
             Route="Library" />
+        
+        <ShellContent
+            Title="Local"
+            ContentTemplate="{DataTemplate views:LocalView}"
+            Route="Local" />
     </TabBar>
 
 </Shell>

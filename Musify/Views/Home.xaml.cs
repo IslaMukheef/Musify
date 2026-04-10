@@ -7,13 +7,8 @@ public partial class Home : ContentPage
         InitializeComponent();
     }
 
-    private async void OnNavigateButtonClicked(object? sender, EventArgs e)
+    private async void OnHomeSearchBarFocused(object? sender, FocusEventArgs e)
     {
-        await Navigation.PushAsync(new LibraryView());
-    }
-
-    private async void OnSearchButtonClicked(object? sender, EventArgs e)
-    {
-        await DisplayAlertAsync("Search", "Search screen will be added in the next task.", "OK");
+        await Navigation.PushAsync(new Search());
     }
 }

@@ -1,0 +1,11 @@
+# .NET / MAUI
+[Bb]in/
+[Oo]bj/
+
+# JetBrains Rider
+.idea/
+*.user
+*.sln.DotSettings.user
+
+# Mac specific
+.DS_Store

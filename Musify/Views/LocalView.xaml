@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Musify.Models"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Musify.Views.LocalView"
+             Title="Local"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1B1B1B">
+
+    <Grid RowDefinitions="Auto, Auto, *, Auto" Padding="20,48,20,20" RowSpacing="20">
+        
+        <VerticalStackLayout Grid.Row="0" Spacing="5">
+            <Label Text="Local Files" TextColor="White" FontSize="28" FontAttributes="Bold" />
+            <Label Text="Upload your MP3s here to add them to your library." TextColor="#B8B8B8" FontSize="16" />
+        </VerticalStackLayout>
+
+        <Button Grid.Row="1" Text="Select Files" Clicked="OnSelectFilesClicked"
+                BackgroundColor="{StaticResource Magenta}" TextColor="White"
+                CornerRadius="14" HeightRequest="50" HorizontalOptions="Fill" />
+
+        <CollectionView Grid.Row="2" ItemsSource="{Binding PickedSongs}"
+                        SelectionMode="None">
+            
+            <CollectionView.EmptyView>
+                <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="0,50,0,0">
+                    <Label Text="No files selected yet." TextColor="#444444" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Song">
+                    <Border BackgroundColor="#2A2A2A" Margin="0,0,0,12" Padding="15" StrokeThickness="0">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="14" />
+                        </Border.StrokeShape>
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSongTapped" CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+
+                        <Grid ColumnDefinitions="Auto, *">
+                            <Image Source="{Binding SongImage}" WidthRequest="45" HeightRequest="45" 
+                                   Aspect="AspectFill" VerticalOptions="Center" Margin="0,0,15,0" />
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding Title}" TextColor="White" FontSize="16" 
+                                       FontAttributes="Bold" LineBreakMode="TailTruncation" />
+                                <Label Text="Ready to Import" TextColor="#B8B8B8" FontSize="12" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Grid.Row="3" Text="Play / Pause" Clicked="OnToggleClicked"
+                BackgroundColor="{StaticResource Magenta}" TextColor="White" 
+                CornerRadius="14" HeightRequest="50" />
+
+        <toolkit:MediaElement x:Name="LocalPlayer" WidthRequest="0" HeightRequest="0" 
+                             Opacity="0" ShouldAutoPlay="True" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,294 @@
+{
+  "Songs": [
+    {
+      "SongId": "0f4b8b45-b1d7-4d3c-9ad7-7a91d3c0f101",
+      "Title": "Billie Jean",
+      "ArtistName": "Michael Jackson",
+      "AlbumName": "Thriller",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 293802,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "4e8a7f4d-8d03-4ec0-99ef-c1427f4b2102",
+      "Title": "Beat It",
+      "ArtistName": "Michael Jackson",
+      "AlbumName": "Thriller",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 258297,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "85b0d930-8ce7-4759-b8e1-e2a5f98f2103",
+      "Title": "Smooth Criminal",
+      "ArtistName": "Michael Jackson",
+      "AlbumName": "The Essential Michael Jackson",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3d/9d/38/3d9d3811-71f0-3a0e-1ada-3004e56ff852/827969428726.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 258635,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3d/9d/38/3d9d3811-71f0-3a0e-1ada-3004e56ff852/827969428726.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "1dd3ad8a-0a53-4a64-8b1b-53a4a5912104",
+      "Title": "Rock With You",
+      "ArtistName": "Michael Jackson",
+      "AlbumName": "Off the Wall",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/fe/a3/0cfea324-57c1-d530-5248-9bb591bbd7bf/074643574525.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 219926,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/fe/a3/0cfea324-57c1-d530-5248-9bb591bbd7bf/074643574525.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "64cb2ef0-1f7b-43d8-8e0f-0b0e6d9d2201",
+      "Title": "No Role Modelz",
+      "ArtistName": "J. Cole",
+      "AlbumName": "2014 Forest Hills Drive",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 292810,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "f239ff4d-b1e0-4c65-913e-e8d8f0582202",
+      "Title": "MIDDLE CHILD",
+      "ArtistName": "J. Cole",
+      "AlbumName": "MIDDLE CHILD - Single",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/00/fd/ce/00fdceb3-c202-ae9a-052a-cce5c8622d5c/00810760037716.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 213594,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/00/fd/ce/00fdceb3-c202-ae9a-052a-cce5c8622d5c/00810760037716.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "90a47ad8-f892-42b0-a7d4-a4d348472203",
+      "Title": "Power Trip (feat. Miguel)",
+      "ArtistName": "J. Cole",
+      "AlbumName": "Born Sinner",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/da/52/41/da52415b-d0ac-d61f-422c-e84bf5ef8162/20UMGIM66000.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 241080,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/da/52/41/da52415b-d0ac-d61f-422c-e84bf5ef8162/20UMGIM66000.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "fc4d4c42-1d0e-4c86-97a2-4cb07abf2204",
+      "Title": "In the Morning (feat. Drake)",
+      "ArtistName": "J. Cole",
+      "AlbumName": "Cole World: The Sideline Story",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3c/4e/6c/3c4e6c35-c1cf-49f9-8cbb-524b1db743f5/18UMGIM69899.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 234387,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3c/4e/6c/3c4e6c35-c1cf-49f9-8cbb-524b1db743f5/18UMGIM69899.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "8f8396b1-3c54-4389-8c0a-695cae913301",
+      "Title": "Cruel Summer",
+      "ArtistName": "Taylor Swift",
+      "AlbumName": "Lover",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 178426,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "54268e9d-d5c8-4450-a6d8-543fb39d3302",
+      "Title": "Blank Space",
+      "ArtistName": "Taylor Swift",
+      "AlbumName": "1989 (Deluxe Edition)",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 231827,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "0be488f8-cfd8-4910-8ca9-3a6459a73303",
+      "Title": "Lover",
+      "ArtistName": "Taylor Swift",
+      "AlbumName": "Lover",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 221300,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg"
+    },
+    {
+      "SongId": "4dfb40b2-cf6d-4b11-91bb-cba0136b3304",
+      "Title": "Style",
+      "ArtistName": "Taylor Swift",
+      "AlbumName": "1989 (Deluxe Edition)",
+      "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg",
+      "LocalPath": "",
+      "PreviewUrl": "",
+      "DurationMs": 231000,
+      "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg"
+    }
+  ],
+  "PlayLists": [
+    {
+      "PlayListID": 1,
+      "PlayListName": "Michael Jackson Mix",
+      "PlayListImage": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg",
+      "CreatorName": "Musify",
+      "Songs": [
+        {
+          "SongId": "0f4b8b45-b1d7-4d3c-9ad7-7a91d3c0f101",
+          "Title": "Billie Jean",
+          "ArtistName": "Michael Jackson",
+          "AlbumName": "Thriller",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 293802,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "4e8a7f4d-8d03-4ec0-99ef-c1427f4b2102",
+          "Title": "Beat It",
+          "ArtistName": "Michael Jackson",
+          "AlbumName": "Thriller",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 258297,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/32/4f/fd/324ffda2-9e51-8f6a-0c2d-c6fd2b41ac55/074643811224.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "85b0d930-8ce7-4759-b8e1-e2a5f98f2103",
+          "Title": "Smooth Criminal",
+          "ArtistName": "Michael Jackson",
+          "AlbumName": "The Essential Michael Jackson",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3d/9d/38/3d9d3811-71f0-3a0e-1ada-3004e56ff852/827969428726.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 258635,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3d/9d/38/3d9d3811-71f0-3a0e-1ada-3004e56ff852/827969428726.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "1dd3ad8a-0a53-4a64-8b1b-53a4a5912104",
+          "Title": "Rock With You",
+          "ArtistName": "Michael Jackson",
+          "AlbumName": "Off the Wall",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/fe/a3/0cfea324-57c1-d530-5248-9bb591bbd7bf/074643574525.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 219926,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0c/fe/a3/0cfea324-57c1-d530-5248-9bb591bbd7bf/074643574525.jpg/100x100bb.jpg"
+        }
+      ]
+    },
+    {
+      "PlayListID": 2,
+      "PlayListName": "J. Cole Essentials",
+      "PlayListImage": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/100x100bb.jpg",
+      "CreatorName": "Musify",
+      "Songs": [
+        {
+          "SongId": "64cb2ef0-1f7b-43d8-8e0f-0b0e6d9d2201",
+          "Title": "No Role Modelz",
+          "ArtistName": "J. Cole",
+          "AlbumName": "2014 Forest Hills Drive",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 292810,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "f239ff4d-b1e0-4c65-913e-e8d8f0582202",
+          "Title": "MIDDLE CHILD",
+          "ArtistName": "J. Cole",
+          "AlbumName": "MIDDLE CHILD - Single",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/00/fd/ce/00fdceb3-c202-ae9a-052a-cce5c8622d5c/00810760037716.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 213594,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/00/fd/ce/00fdceb3-c202-ae9a-052a-cce5c8622d5c/00810760037716.rgb.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "90a47ad8-f892-42b0-a7d4-a4d348472203",
+          "Title": "Power Trip (feat. Miguel)",
+          "ArtistName": "J. Cole",
+          "AlbumName": "Born Sinner",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/da/52/41/da52415b-d0ac-d61f-422c-e84bf5ef8162/20UMGIM66000.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 241080,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/da/52/41/da52415b-d0ac-d61f-422c-e84bf5ef8162/20UMGIM66000.rgb.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "fc4d4c42-1d0e-4c86-97a2-4cb07abf2204",
+          "Title": "In the Morning (feat. Drake)",
+          "ArtistName": "J. Cole",
+          "AlbumName": "Cole World: The Sideline Story",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3c/4e/6c/3c4e6c35-c1cf-49f9-8cbb-524b1db743f5/18UMGIM69899.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 234387,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3c/4e/6c/3c4e6c35-c1cf-49f9-8cbb-524b1db743f5/18UMGIM69899.rgb.jpg/100x100bb.jpg"
+        }
+      ]
+    },
+    {
+      "PlayListID": 3,
+      "PlayListName": "Taylor Swift Pop",
+      "PlayListImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg",
+      "CreatorName": "Musify",
+      "Songs": [
+        {
+          "SongId": "8f8396b1-3c54-4389-8c0a-695cae913301",
+          "Title": "Cruel Summer",
+          "ArtistName": "Taylor Swift",
+          "AlbumName": "Lover",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 178426,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "54268e9d-d5c8-4450-a6d8-543fb39d3302",
+          "Title": "Blank Space",
+          "ArtistName": "Taylor Swift",
+          "AlbumName": "1989 (Deluxe Edition)",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 231827,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "0be488f8-cfd8-4910-8ca9-3a6459a73303",
+          "Title": "Lover",
+          "ArtistName": "Taylor Swift",
+          "AlbumName": "Lover",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 221300,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/49/3d/ab/493dab54-f920-9043-6181-80993b8116c9/19UMGIM53909.rgb.jpg/100x100bb.jpg"
+        },
+        {
+          "SongId": "4dfb40b2-cf6d-4b11-91bb-cba0136b3304",
+          "Title": "Style",
+          "ArtistName": "Taylor Swift",
+          "AlbumName": "1989 (Deluxe Edition)",
+          "ArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg",
+          "LocalPath": "",
+          "PreviewUrl": "",
+          "DurationMs": 231000,
+          "SongImage": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a7/98/d8/a798d867-344d-2bf2-fbfe-d2d1412dcef8/14UMDIM03793.rgb.jpg/100x100bb.jpg"
+        }
+      ]
+    }
+  ]
+}

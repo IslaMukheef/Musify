@@ -23,7 +23,7 @@ public partial class LibraryView : ContentPage
     private async void OnNewTapped(object sender, TappedEventArgs args)
     {
         if (BindingContext is LibraryViewModel libraryView)
-            await Navigation.PushAsync(new NewPlayListView());
+            await Navigation.PushAsync(new NewPlayListView(libraryView._library));
     }
 
     // this will only edit playlist as ADD OR REMOVE SONGS FROM A PLAYLIST

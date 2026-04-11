@@ -6,7 +6,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 public class NewPlayListViewModel  : INotifyPropertyChanged
 {
-    public ObservableCollection<PlayList> playlist { get; set; }
+    private LibraryData _library;
+    
     private ImageSource _playListImagel;
     private string _title;
     private int _playlistId;
@@ -40,9 +41,9 @@ public class NewPlayListViewModel  : INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-	public NewPlayListViewModel()
+    public NewPlayListViewModel(LibraryData library)
 	{
-        playlist = new ObservableCollection<PlayList>();
+        _library = library;
     }
 
     // https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/device-media/picker?view=net-maui-10.0&tabs=android
@@ -69,9 +70,9 @@ public class NewPlayListViewModel  : INotifyPropertyChanged
     public async Task OnCreateNewPlaylist()
     {
         // set new id for the playlist making sure each playlist get a new id
-        GetNewListId = playlist.Any() ? playlist.Max(p => p.PlayListID) + 1 : 1;
-        playlist.Add(new PlayList(NewTitle, GetNewListId, _imagePath, "Isla"));
-            
+        GetNewListId = _library.PlayLists.Any() ? _library.PlayLists.Max(p => p.PlayListID) + 1 : 1;
+        _library.PlayLists.Add(new PlayList(NewTitle, GetNewListId, _imagePath, "Isla"));
+        
     }
 
     public event PropertyChangedEventHandler PropertyChanged;

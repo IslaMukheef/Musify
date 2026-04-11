@@ -1,12 +1,14 @@
 namespace Musify.Views;
+
+using Musify.Models;
 using Musify.ViewModels;
 
 public partial class NewPlayListView 
 {
-	public NewPlayListView()
+	public NewPlayListView(LibraryData _lib)
 	{
 		InitializeComponent();
-		BindingContext = new NewPlayListViewModel();
+		BindingContext = new NewPlayListViewModel(_lib);
 	}
 
 
@@ -19,6 +21,7 @@ public partial class NewPlayListView
     {
         if (BindingContext is NewPlayListViewModel vm)
             await vm.OnCreateNewPlaylist();
+        await Navigation.PopAsync();
     }
 
     private async void OnBackButtonClicked(object sender, EventArgs e)

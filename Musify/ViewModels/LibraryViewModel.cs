@@ -12,7 +12,7 @@ namespace Musify.ViewModels
 {
     public class LibraryViewModel : INotifyPropertyChanged
     {
-        private LibraryData _library;
+        public LibraryData _library;
         public ObservableCollection<PlayList> playlist => _library.PlayLists;
 
         private PlayList _selectedPlaylist;
@@ -42,7 +42,7 @@ namespace Musify.ViewModels
         private async void LoadData()
         {
             var manager = new SeedDataManager();
-            _library = await manager.ReadSeedDataAsync();
+            _library = manager.ReadSeedData();
 
             OnPropertyChanged(nameof(playlist));
         }

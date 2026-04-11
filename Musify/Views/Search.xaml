@@ -3,15 +3,155 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Musify.Views.Search"
              Title="Search"
+             BackgroundColor="#121212"
+             Loaded="OnPageLoaded"
              Shell.NavBarIsVisible="False"
-             NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#1B1B1B">
+             NavigationPage.HasNavigationBar="False">
 
-    <Grid>
-        <Label Text="This is the Search view"
-               TextColor="White"
-               FontSize="24"
-               HorizontalOptions="Center"
-               VerticalOptions="Center" />
-    </Grid>
+    <ScrollView>
+        <VerticalStackLayout Padding="20,48,20,20"
+                             Spacing="16">
+            <Grid ColumnDefinitions="*,Auto"
+                  ColumnSpacing="10">
+                <SearchBar x:Name="SearchInputBar"
+                           Placeholder="What do you want to listen to?"
+                           BackgroundColor="#121212"
+                           TextColor="White"
+                           PlaceholderColor="#8C8C8C"
+                           TextChanged="OnSearchTextChanged"
+                           HorizontalOptions="Fill" />
+
+                <Label Grid.Column="1"
+                       Text="Cancel"
+                       TextColor="White"
+                       VerticalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCancelButtonClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+
+            <Label x:Name="SearchSectionLabel"
+                   Text="Explore"
+                   TextColor="White"
+                   FontSize="18" />
+
+            <VerticalStackLayout x:Name="SuggestionList"
+                                 Spacing="12">
+                <Button Text="Michael Jackson"
+                        Clicked="OnSuggestionClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontSize="17"
+                        TextTransform="None"
+                        HorizontalOptions="Start" />
+
+                <Button Text="J. Cole"
+                        Clicked="OnSuggestionClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontSize="17"
+                        TextTransform="None"
+                        HorizontalOptions="Start" />
+
+                <Button Text="Taylor Swift"
+                        Clicked="OnSuggestionClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontSize="17"
+                        TextTransform="None"
+                        HorizontalOptions="Start" />
+
+                <Button Text="Drake"
+                        Clicked="OnSuggestionClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontSize="17"
+                        TextTransform="None"
+                        HorizontalOptions="Start" />
+
+                <Button Text="SZA"
+                        Clicked="OnSuggestionClicked"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontSize="17"
+                        TextTransform="None"
+                        HorizontalOptions="Start" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout x:Name="ResultsList"
+                                 Spacing="12"
+                                 IsVisible="False">
+                <Border BackgroundColor="#332433"
+                        StrokeThickness="0"
+                        Padding="12">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14" />
+                    </Border.StrokeShape>
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          ColumnSpacing="12">
+                        <Border BackgroundColor="#5B5B5B"
+                                StrokeThickness="0"
+                                WidthRequest="56"
+                                HeightRequest="56">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                        </Border>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="2"
+                                             VerticalOptions="Center">
+                            <Label Text="Billie Jean"
+                                   TextColor="White"
+                                   FontSize="16"
+                                   FontAttributes="Bold" />
+                            <Label Text="Michael Jackson"
+                                   TextColor="#D0D0D0"
+                                   FontSize="13" />
+                            <Label Text="Thriller"
+                                   TextColor="#9B9B9B"
+                                   FontSize="12" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+
+                <Border BackgroundColor="#332433"
+                        StrokeThickness="0"
+                        Padding="12">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="14" />
+                    </Border.StrokeShape>
+
+                    <Grid ColumnDefinitions="Auto,*"
+                          ColumnSpacing="12">
+                        <Border BackgroundColor="#5B5B5B"
+                                StrokeThickness="0"
+                                WidthRequest="56"
+                                HeightRequest="56">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+                        </Border>
+
+                        <VerticalStackLayout Grid.Column="1"
+                                             Spacing="2"
+                                             VerticalOptions="Center">
+                            <Label Text="No Role Modelz"
+                                   TextColor="White"
+                                   FontSize="16"
+                                   FontAttributes="Bold" />
+                            <Label Text="J. Cole"
+                                   TextColor="#D0D0D0"
+                                   FontSize="13" />
+                            <Label Text="2014 Forest Hills Drive"
+                                   TextColor="#9B9B9B"
+                                   FontSize="12" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

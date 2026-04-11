@@ -1,4 +1,6 @@
-﻿using Musify.Models;
+﻿using Musify.DataAccess;
+using Musify.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +12,9 @@ namespace Musify.ViewModels
 {
     public class LibraryViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<PlayList> playlist { get; set; }
+        private LibraryData _library;
+        public ObservableCollection<PlayList> playlist => _library.PlayLists;
+
         private PlayList _selectedPlaylist;
 
         public PlayList SelectedPlaylist
@@ -26,15 +30,22 @@ namespace Musify.ViewModels
 
         public LibraryViewModel()
         {
-            playlist = new ObservableCollection<PlayList>
-            {
-            new PlayList("Chill Vibes", 1,"dotnet_bot.png","Isla"),
-            new PlayList("Workout Mix", 2,"dotnet_bot.png"," Chappell Roan")
-            };
-            
+            _library = new LibraryData();
+            LoadData();
+
+
+
+
+
         }
 
-        
+        private async void LoadData()
+        {
+            var manager = new SeedDataManager();
+            _library = await manager.ReadSeedDataAsync();
+
+            OnPropertyChanged(nameof(playlist));
+        }
 
 
         //https://stackoverflow.com/questions/17885923/onpropertychange-does-not-exist-in-the-current-context

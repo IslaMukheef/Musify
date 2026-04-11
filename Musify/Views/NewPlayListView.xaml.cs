@@ -21,6 +21,7 @@ public partial class NewPlayListView
     {
         if (BindingContext is NewPlayListViewModel vm)
             await vm.OnCreateNewPlaylist();
+        //pop back to libray after creating the new playlist
         await Navigation.PopAsync();
     }
 
@@ -28,8 +29,5 @@ public partial class NewPlayListView
     {
         await Navigation.PopAsync();
     }
-    private async void ShowTheNewPlaylist()
-    {
-        //do nothing
-    }
+    
 }

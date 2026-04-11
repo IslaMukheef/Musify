@@ -32,7 +32,7 @@ public class NewPlayListViewModel  : INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-    public ImageSource PlayListImage
+    public ImageSource PlaylistImage
     {
         get => _playListImagel;
         set
@@ -57,13 +57,13 @@ public class NewPlayListViewModel  : INotifyPropertyChanged
         if(result!= null)
         {
             _imagePath = result.FullPath;
-            PlayListImage = ImageSource.FromFile(_imagePath);
+            PlaylistImage = ImageSource.FromFile(_imagePath);
         }
         else
         {
             // if user did not chose a picture use defualt picture
             _imagePath = "dotnet_bot.png";
-            PlayListImage = ImageSource.FromFile(_imagePath);
+            PlaylistImage = ImageSource.FromFile(_imagePath);
         }
     }
 

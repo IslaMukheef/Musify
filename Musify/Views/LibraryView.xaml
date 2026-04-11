@@ -55,42 +55,39 @@
                                        VerticalOptions="Center"
                                        Grid.Row="0"
                                        HorizontalOptions="Start"/>
-                                
+
                                 <Label Grid.Row="1" TextColor="White"
                                        Grid.Column="1"
                                        VerticalOptions="Start"
                                        Text="{Binding CreatorName}"
                                        FontAttributes="Italic"
                                        />
-                                 
+
                             </Grid>
                         </Border>
                     </ContentView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-         <Border Grid.Row="2"
-         Grid.ColumnSpan="2"
-         BackgroundColor="AliceBlue"
-         Margin="10"
-         WidthRequest="100"
-         HeightRequest="45">
-     <Label Text="New" TextColor="Black"
-            Grid.Column="0"
-            Margin="10"
-            FontAttributes="Bold"
-            VerticalOptions="Start"
-            HorizontalOptions="Center"
-           />
-     <Border.StrokeShape>
-         <RoundRectangle CornerRadius="14"/>
-     </Border.StrokeShape>
-     <Border.GestureRecognizers>
-         <TapGestureRecognizer Tapped="OnNewTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
-     </Border.GestureRecognizers>
- </Border>
+        <Button
+             Grid.Row="2"
+             Grid.Column="0"
+             Margin="10"
+             Text="New"
+             WidthRequest="100"
+             HeightRequest="45"
+             Clicked="OnNewClicked"/>
+        <Button
+             Grid.Row="2"
+             Grid.Column="1"
+             Margin="10"
+             Text="Edit"
+             WidthRequest="100"
+             HeightRequest="45"
+             Clicked="OnPlayListEditClicked"/>
 
-       
-     
+
+
+
     </Grid>
 </ContentPage>

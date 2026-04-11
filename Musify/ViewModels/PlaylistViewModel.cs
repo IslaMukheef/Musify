@@ -48,14 +48,14 @@ public class PlaylistViewModel : INotifyPropertyChanged
 	{
         CurrentPlayList = playlist;
 
-		newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
-		CurrentPlayList.AddSongToPlaylist(newSong);
-        newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
-        CurrentPlayList.AddSongToPlaylist(newSong);
-        newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
-        CurrentPlayList.AddSongToPlaylist(newSong);
-        newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
-        CurrentPlayList.AddSongToPlaylist(newSong);
+		//newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
+		//CurrentPlayList.AddSongToPlaylist(newSong);
+  //      newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
+  //      CurrentPlayList.AddSongToPlaylist(newSong);
+  //      newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
+  //      CurrentPlayList.AddSongToPlaylist(newSong);
+  //      newSong = new Song("Good Luck babe", "Chappell Roan", "Midwest", "null", "null", "null", 3, "dotnet_bot.png");
+  //      CurrentPlayList.AddSongToPlaylist(newSong);
 
     }
 

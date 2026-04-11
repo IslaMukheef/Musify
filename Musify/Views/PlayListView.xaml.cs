@@ -29,5 +29,14 @@ public partial class PlayListView : ContentPage
     {
         await Navigation.PopAsync();
     }
-    
+
+
+    private async void OnEditButtonClicked(object sender, EventArgs e)
+    {
+        if (BindingContext is PlaylistViewModel vm)
+            await Navigation.PushAsync(new AddRemovePlaylistSongsView(vm.CurrentPlayList));
+        //pop back to libray after creating the new playlist
+        //await Navigation.PopAsync();
+    }
+
 }

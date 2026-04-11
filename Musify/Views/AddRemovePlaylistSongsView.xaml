@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Musify.Views.AddRemovePlaylistSongsView"
+                          NavigationPage.HasNavigationBar="False"
+             BackgroundColor="black">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0"
+               Grid.ColumnSpan="2"
+               Source="{Binding SelectedListImage}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               WidthRequest="400"
+               HeightRequest="400"
+               Margin="5"
+               Aspect="AspectFit"></Image>
+        <Label 
+               Grid.Column="0"
+               Grid.Row="1"
+               TextColor="White"
+               Margin="10">
+            <!--https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-10.0#use-formatted-text-->
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding CurrentPlayList.PlayListName}"
+                          FontAttributes="Bold">
+                        
+                    </Span>
+                    <Span Text="&#10;"/>
+                    <Span Text="{Binding CurrentPlayList.CreatorName}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <CollectionView Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding PlayListSongs}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedSong, Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Border BackgroundColor="#332433" Margin="10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="14"/>
+                            </Border.StrokeShape>
+                           
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border  
+                                        Stroke="White"
+                                        StrokeThickness="1"
+                                        StrokeShape="RoundRectangle 20"
+                                        Margin="5,5,10,5" 
+                                        Grid.RowSpan="2"
+                                    Grid.Column="0">
+                                    <Image Source="{Binding SongImage}"
+                                           Aspect="AspectFit"
+                                           WidthRequest="30"
+                                           HeightRequest="30"
+                                           VerticalOptions="Center"/>
+                                </Border>
+                                <Label Grid.Column="1"
+                                       TextColor="White"
+                                       Text="{Binding Title}"
+                                       FontAttributes="Bold"
+                                       VerticalOptions="Center"
+                                       Grid.Row="0"
+                                       HorizontalOptions="Start"/>
+
+                                <Label Grid.Row="1" TextColor="White"
+                                       Grid.Column="1"
+                                       VerticalOptions="Start"
+                                       Text="{Binding ArtistName}"
+                                       FontAttributes="Italic"
+                                       />
+
+                            </Grid>
+                        </Border>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button
+           Grid.Column="0"
+           Grid.Row="3"
+           Text="Delete"
+           Clicked="OnEditButtonClicked"
+           Margin="10"
+           VerticalOptions="Center"
+           FontAttributes="Bold"
+           HorizontalOptions="End"/>
+        <Button Text="Back"
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="10"
+            FontAttributes="Bold"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="OnBackButtonClicked"/>
+    </Grid>
+</ContentPage>

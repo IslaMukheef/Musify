@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Musify.Views.PlayListView"
-                          NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="black">
 
     <Grid>
@@ -26,7 +26,7 @@
                Margin="5"
                Aspect="AspectFit"></Image>
         <Label 
-               Grid.ColumnSpan="2"
+               Grid.Column="0"
                Grid.Row="1"
                TextColor="White"
                Margin="10">
@@ -44,6 +44,13 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                Text="Edit"
+                WidthRequest="70"
+                HeightRequest="30"
+                BackgroundColor="Purple"
+                Clicked="OnEditButtonClicked"/>
         <CollectionView Grid.Row="2"
                         Grid.ColumnSpan="2"
                         ItemsSource="{Binding PlayListSongs}"
@@ -106,7 +113,7 @@
         </CollectionView>
         <Border Grid.Row="3"
                 Grid.Column="0"
-                BackgroundColor="AliceBlue"
+                BackgroundColor="Purple"
                 Margin="10"
                 WidthRequest="100">
             <Label Text="Back" TextColor="Black"

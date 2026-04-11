@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="black">
 
-    <Grid RowDefinitions="Auto, *"
+    <Grid RowDefinitions="Auto, *, auto"
                  ColumnDefinitions="*,*">
         <CollectionView Grid.Row="0"
                         Grid.ColumnSpan="2"
@@ -69,7 +69,26 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        
+         <Border Grid.Row="2"
+         Grid.ColumnSpan="2"
+         BackgroundColor="AliceBlue"
+         Margin="10">
+     <Label Text="New" TextColor="Black"
+            Grid.Column="0"
+            Margin="10"
+            FontAttributes="Bold"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            WidthRequest="50"
+            HeightRequest="50"/>
+     <Border.StrokeShape>
+         <RoundRectangle CornerRadius="14"/>
+     </Border.StrokeShape>
+     <Border.GestureRecognizers>
+         <TapGestureRecognizer Tapped="OnNewTapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+     </Border.GestureRecognizers>
+ </Border>
+
        
      
     </Grid>

@@ -37,14 +37,12 @@
                 </Label>
             </Grid>
 
-            <Label x:Name="SearchSectionLabel"
-                   Text="Suggestions"
+            <Label Text="Suggestions"
                    TextColor="White"
                    FontSize="18"
                    IsVisible="{Binding ShowSuggestions}" />
 
-            <VerticalStackLayout x:Name="SuggestionList"
-                                 IsVisible="{Binding ShowSuggestions}"
+            <VerticalStackLayout IsVisible="{Binding ShowSuggestions}"
                                  Spacing="12">
                 <Button Text="Michael Jackson"
                         Clicked="OnSuggestionClicked"
@@ -71,8 +69,7 @@
                         HorizontalOptions="Start" />
             </VerticalStackLayout>
 
-            <VerticalStackLayout x:Name="ResultsList"
-                                 BindableLayout.ItemsSource="{Binding FilteredSongs}"
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding FilteredSongs}"
                                  Spacing="12"
                                  IsVisible="{Binding ShowResults}">
                 <BindableLayout.ItemTemplate>
@@ -120,8 +117,7 @@
                 </BindableLayout.ItemTemplate>
             </VerticalStackLayout>
 
-            <Label x:Name="NoResultsLabel"
-                   Text="No results found."
+            <Label Text="No results found."
                    TextColor="#B8B8B8"
                    FontSize="16"
                    IsVisible="{Binding ShowNoResults}" />

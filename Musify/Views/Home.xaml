@@ -19,16 +19,14 @@
                            FontAttributes="Bold" />
                 </VerticalStackLayout>
 
-                <SearchBar x:Name="HomeSearchBar"
-                           Placeholder="Search songs or artists"
+                <SearchBar Placeholder="Search songs or artists"
                            BackgroundColor="#121212"
                            TextColor="White"
                            PlaceholderColor="#8C8C8C"
                            Focused="OnHomeSearchBarFocused"
                            HorizontalOptions="Fill" />
 
-                <VerticalStackLayout x:Name="GetStartedSection"
-                                     Spacing="12">
+                <VerticalStackLayout Spacing="12">
                     <Label Text="Explore"
                            TextColor="White"
                            FontSize="22"
@@ -36,9 +34,11 @@
 
                     <Grid ColumnDefinitions="*,*"
                           ColumnSpacing="14">
-                        <VerticalStackLayout x:Name="ChillMixCard"
-                                             Grid.Column="0"
+                        <VerticalStackLayout Grid.Column="0"
                                              Spacing="4">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFirstPlaylistTapped" />
+                            </VerticalStackLayout.GestureRecognizers>
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
                                     HeightRequest="140"
@@ -62,9 +62,11 @@
                                    FontSize="13" />
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout x:Name="TopTracksCard"
-                                             Grid.Column="1"
+                        <VerticalStackLayout Grid.Column="1"
                                              Spacing="4">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSecondPlaylistTapped" />
+                            </VerticalStackLayout.GestureRecognizers>
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
                                     HeightRequest="140"
@@ -91,8 +93,8 @@
                     </Grid>
                 </VerticalStackLayout>
 
-                <VerticalStackLayout x:Name="LibrarySection"
-                                     Spacing="12">
+                <VerticalStackLayout Spacing="12"
+                                     Margin="0,12,0,0">
                     <Label Text="Discover something new"
                            TextColor="White"
                            FontSize="22"
@@ -102,9 +104,11 @@
                           RowDefinitions="Auto,Auto"
                           ColumnSpacing="14"
                           RowSpacing="16">
-                        <VerticalStackLayout x:Name="WorkoutPlaylistCard"
-                                             Grid.Column="0"
+                        <VerticalStackLayout Grid.Column="0"
                                              Spacing="4">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFirstSongTapped" />
+                            </VerticalStackLayout.GestureRecognizers>
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
                                     HeightRequest="140"
@@ -129,9 +133,11 @@
                                    FontSize="13" />
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout x:Name="LateNightMixCard"
-                                             Grid.Column="1"
+                        <VerticalStackLayout Grid.Column="1"
                                              Spacing="4">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSecondSongTapped" />
+                            </VerticalStackLayout.GestureRecognizers>
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
                                     HeightRequest="140"
@@ -159,6 +165,9 @@
                         <VerticalStackLayout Grid.Row="1"
                                              Grid.Column="0"
                                              Spacing="4">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnThirdSongTapped" />
+                            </VerticalStackLayout.GestureRecognizers>
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
                                     HeightRequest="140"
@@ -186,6 +195,9 @@
                         <VerticalStackLayout Grid.Row="1"
                                              Grid.Column="1"
                                              Spacing="4">
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFourthSongTapped" />
+                            </VerticalStackLayout.GestureRecognizers>
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
                                     HeightRequest="140"

@@ -23,6 +23,13 @@ public partial class LocalView : ContentPage
 
     private async void OnSelectFilesClicked(object? sender, EventArgs e)
     {
+        var button = sender as VisualElement;
+        if (button != null)
+        {
+            // Upload File click feedback animation
+            await button.ScaleTo(0.85, 80, Easing.CubicOut);
+            await button.ScaleTo(1.0, 80, Easing.CubicIn);
+        }
         await _viewModel.PickMusicFiles();
     }
 }

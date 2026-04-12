@@ -58,6 +58,8 @@
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 		<MauiImage Update="Resources\Images\edit_icon.svg" TintColor="#696969" />
 		<MauiImage Update="Resources\Images\plus_icon.svg" TintColor="#696969" />
+		<MauiImage Update="Resources\Images\back_icon.svg" TintColor="696969"/>
+		<MauiImage Update="Resources\Images\upload_icon.svg"/>
 		
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />

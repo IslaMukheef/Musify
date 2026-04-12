@@ -3,20 +3,23 @@
     x:Class="Musify.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Musify.Views"
-    FlyoutBehavior="Disabled"
-    BackgroundColor="#1B1B1B">
+    xmlns:local="clr-namespace:Musify"
+    xmlns:views="clr-namespace:Musify.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
     <TabBar>
-        <Tab Title="Home">
-            <ShellContent ContentTemplate="{DataTemplate local:Home}" />
+        <Tab Title="Home" Icon="home_navi_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:Home}" />
         </Tab>
-        <Tab Title="Library">
-            <ShellContent ContentTemplate="{DataTemplate local:LibraryView}" />
+
+        <Tab Title="Library" Icon="library_navi_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:LibraryView}" />
         </Tab>
-        <Tab Title="Local">
-            <ShellContent ContentTemplate="{DataTemplate local:LocalView}" />
+
+        <Tab Title="Local" Icon="local_navi_icon.png">
+            <ShellContent ContentTemplate="{DataTemplate views:LocalView}" />
         </Tab>
     </TabBar>
-    
+
 </Shell>

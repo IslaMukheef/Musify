@@ -61,22 +61,6 @@
                         FontSize="17"
                         TextTransform="None"
                         HorizontalOptions="Start" />
-
-                <Button Text="Drake"
-                        Clicked="OnSuggestionClicked"
-                        BackgroundColor="Transparent"
-                        TextColor="White"
-                        FontSize="17"
-                        TextTransform="None"
-                        HorizontalOptions="Start" />
-
-                <Button Text="SZA"
-                        Clicked="OnSuggestionClicked"
-                        BackgroundColor="Transparent"
-                        TextColor="White"
-                        FontSize="17"
-                        TextTransform="None"
-                        HorizontalOptions="Start" />
             </VerticalStackLayout>
 
             <VerticalStackLayout x:Name="ResultsList"
@@ -123,6 +107,12 @@
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </VerticalStackLayout>
+
+            <Label x:Name="NoResultsLabel"
+                   Text="No results found."
+                   TextColor="#B8B8B8"
+                   FontSize="16"
+                   IsVisible="False" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

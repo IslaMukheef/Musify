@@ -35,11 +35,13 @@ public partial class Search : ContentPage
     private void UpdateSearchLabel()
     {
         bool hasQuery = !string.IsNullOrWhiteSpace(SearchInputBar.Text);
+        bool hasResults = _filteredSongs.Count > 0;
 
         SearchSectionLabel.Text = "Explore";
         SearchSectionLabel.IsVisible = !hasQuery;
         SuggestionList.IsVisible = !hasQuery;
-        ResultsList.IsVisible = hasQuery;
+        ResultsList.IsVisible = hasQuery && hasResults;
+        NoResultsLabel.IsVisible = hasQuery && !hasResults;
     }
 
     private void OnSearchTextChanged(object? sender, TextChangedEventArgs e)

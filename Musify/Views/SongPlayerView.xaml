@@ -31,9 +31,9 @@
         <Border Grid.Row="1" 
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" 
-                WidthRequest="320" 
-                HeightRequest="320" 
-                StrokeThickness="0">
+                WidthRequest="280" 
+                HeightRequest="280" 
+                StrokeThickness="3">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="20"/>
             </Border.StrokeShape>

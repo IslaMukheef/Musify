@@ -12,36 +12,12 @@
         <ScrollView>
             <VerticalStackLayout Padding="20,48,20,20"
                                  Spacing="12">
-                <Grid ColumnDefinitions="*,Auto"
-                      ColumnSpacing="12">
-                    <VerticalStackLayout Spacing="4">
-                        <Label Text="Home"
-                               TextColor="White"
-                               FontSize="28"
-                               FontAttributes="Bold" />
-                    </VerticalStackLayout>
-
-                    <Border Grid.Column="1"
-                            BackgroundColor="#4A4A4A"
-                            StrokeThickness="0"
-                            WidthRequest="42"
-                            HeightRequest="42"
-                            HorizontalOptions="End"
-                            VerticalOptions="Start">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="21" />
-                        </Border.StrokeShape>
-
-                        <Label Text="P"
-                               TextColor="White"
-                               FontSize="16"
-                               FontAttributes="Bold"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               HorizontalTextAlignment="Center"
-                               VerticalTextAlignment="Center" />
-                    </Border>
-                </Grid>
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Home"
+                           TextColor="White"
+                           FontSize="28"
+                           FontAttributes="Bold" />
+                </VerticalStackLayout>
 
                 <SearchBar x:Name="HomeSearchBar"
                            Placeholder="Search songs or artists"
@@ -53,7 +29,7 @@
 
                 <VerticalStackLayout x:Name="GetStartedSection"
                                      Spacing="12">
-                    <Label Text="To get you started"
+                    <Label Text="Explore"
                            TextColor="White"
                            FontSize="22"
                            FontAttributes="Bold" />
@@ -69,14 +45,19 @@
                                     Margin="0,0,0,4"> <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
+
+                                <Image x:Name="FirstPlaylistImage"
+                                       Aspect="AspectFill" />
                             </Border>
 
-                            <Label Text="Chill Mix"
+                            <Label x:Name="FirstPlaylistTitle"
+                                   Text="Chill Mix"
                                    TextColor="White"
                                    FontSize="15"
                                    FontAttributes="Bold" />
 
-                            <Label Text="Relaxed songs for studying"
+                            <Label x:Name="FirstPlaylistSubtitle"
+                                   Text="Relaxed songs for studying"
                                    TextColor="#B8B8B8"
                                    FontSize="13" />
                         </VerticalStackLayout>
@@ -91,14 +72,19 @@
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
+
+                                <Image x:Name="SecondPlaylistImage"
+                                       Aspect="AspectFill" />
                             </Border>
 
-                            <Label Text="Top Tracks"
+                            <Label x:Name="SecondPlaylistTitle"
+                                   Text="Top Tracks"
                                    TextColor="White"
                                    FontSize="15"
                                    FontAttributes="Bold" />
 
-                            <Label Text="Popular songs from your library"
+                            <Label x:Name="SecondPlaylistSubtitle"
+                                   Text="Popular songs from your library"
                                    TextColor="#B8B8B8"
                                    FontSize="13" />
                         </VerticalStackLayout>
@@ -108,12 +94,14 @@
                 <VerticalStackLayout x:Name="LibrarySection"
                                      Spacing="12">
                     <Label Text="Discover something new"
-                               TextColor="White"
-                               FontSize="22"
-                               FontAttributes="Bold" />
+                           TextColor="White"
+                           FontSize="22"
+                           FontAttributes="Bold" />
 
                     <Grid ColumnDefinitions="*,*"
-                          ColumnSpacing="14">
+                          RowDefinitions="Auto,Auto"
+                          ColumnSpacing="14"
+                          RowSpacing="16">
                         <VerticalStackLayout x:Name="WorkoutPlaylistCard"
                                              Grid.Column="0"
                                              Spacing="4">
@@ -124,14 +112,19 @@
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
+
+                                <Image x:Name="FirstSongImage"
+                                       Aspect="AspectFill" />
                             </Border>
 
-                            <Label Text="Indie Finds"
+                            <Label x:Name="FirstSongTitle"
+                                   Text="Indie Finds"
                                    TextColor="White"
                                    FontSize="15"
                                    FontAttributes="Bold" />
 
-                            <Label Text="Fresh tracks to check out"
+                            <Label x:Name="FirstSongSubtitle"
+                                   Text="Fresh tracks to check out"
                                    TextColor="#B8B8B8"
                                    FontSize="13" />
                         </VerticalStackLayout>
@@ -146,14 +139,73 @@
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
+
+                                <Image x:Name="SecondSongImage"
+                                       Aspect="AspectFill" />
                             </Border>
 
-                            <Label Text="Artist Spotlight"
+                            <Label x:Name="SecondSongTitle"
+                                   Text="Artist Spotlight"
                                    TextColor="White"
                                    FontSize="15"
                                    FontAttributes="Bold" />
 
-                            <Label Text="New artists worth exploring"
+                            <Label x:Name="SecondSongSubtitle"
+                                   Text="New artists worth exploring"
+                                   TextColor="#B8B8B8"
+                                   FontSize="13" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Row="1"
+                                             Grid.Column="0"
+                                             Spacing="4">
+                            <Border BackgroundColor="#5B5B5B"
+                                    StrokeThickness="0"
+                                    HeightRequest="140"
+                                    Margin="0,0,0,4">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="14" />
+                                </Border.StrokeShape>
+
+                                <Image x:Name="ThirdSongImage"
+                                       Aspect="AspectFill" />
+                            </Border>
+
+                            <Label x:Name="ThirdSongTitle"
+                                   Text="Song title"
+                                   TextColor="White"
+                                   FontSize="15"
+                                   FontAttributes="Bold" />
+
+                            <Label x:Name="ThirdSongSubtitle"
+                                   Text="Artist name"
+                                   TextColor="#B8B8B8"
+                                   FontSize="13" />
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Row="1"
+                                             Grid.Column="1"
+                                             Spacing="4">
+                            <Border BackgroundColor="#5B5B5B"
+                                    StrokeThickness="0"
+                                    HeightRequest="140"
+                                    Margin="0,0,0,4">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="14" />
+                                </Border.StrokeShape>
+
+                                <Image x:Name="FourthSongImage"
+                                       Aspect="AspectFill" />
+                            </Border>
+
+                            <Label x:Name="FourthSongTitle"
+                                   Text="Song title"
+                                   TextColor="White"
+                                   FontSize="15"
+                                   FontAttributes="Bold" />
+
+                            <Label x:Name="FourthSongSubtitle"
+                                   Text="Artist name"
                                    TextColor="#B8B8B8"
                                    FontSize="13" />
                         </VerticalStackLayout>

@@ -5,8 +5,14 @@ namespace Musify.Views;
 
 public partial class LocalView : ContentPage
 {
+    /// <summary>
+    /// Initially, Local view held media controls and playback
+    /// capabilities for testing purposes, which is now removed.
+    /// LocalView only allows pushing a Song from local to Library.
+    /// Songs can then be controlled directly from the global media
+    /// control or Song View.
+    /// </summary>
     private LocalViewModel _viewModel;
-
     public LocalView()
     {
         InitializeComponent();
@@ -18,14 +24,5 @@ public partial class LocalView : ContentPage
     private async void OnSelectFilesClicked(object? sender, EventArgs e)
     {
         await _viewModel.PickMusicFiles();
-    }
-
-    private async void OnSongTapped(object? sender, TappedEventArgs e)
-    {
-        if (sender is Border tappedBorder)
-        {
-            await tappedBorder.FadeToAsync(0.6, 50); 
-            await tappedBorder.FadeToAsync(1.0, 50);
-        }
     }
 }

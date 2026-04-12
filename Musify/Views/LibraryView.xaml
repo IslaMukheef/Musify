@@ -5,7 +5,7 @@
              xmlns:models="clr-namespace:Musify.Models"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="black">
+             BackgroundColor="#121212">
 
     <Grid RowDefinitions="Auto, *, Auto, Auto, Auto" Padding="20,48,20,10">
         
@@ -39,6 +39,9 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Song">
                     <Grid ColumnDefinitions="Auto, *" Padding="10">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSongTapped" />
+                        </Grid.GestureRecognizers>
                         <Border StrokeShape="RoundRectangle 10" StrokeThickness="0">
                             <Image Source="{Binding SongImage}" WidthRequest="45" HeightRequest="45" Aspect="AspectFill"/>
                         </Border>

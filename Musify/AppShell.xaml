@@ -18,5 +18,5 @@
             <ShellContent ContentTemplate="{DataTemplate local:LocalView}" />
         </Tab>
     </TabBar>
-
+    
 </Shell>

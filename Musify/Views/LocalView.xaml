@@ -6,7 +6,7 @@
              Title="Local"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="#1B1B1B">
+             BackgroundColor="#121212">
 
     <Grid RowDefinitions="Auto, Auto, *" Padding="20,48,20,20" RowSpacing="20">
         <VerticalStackLayout Grid.Row="0" Spacing="5">
@@ -26,7 +26,6 @@
                 <DataTemplate x:DataType="models:Song">
                     <Border BackgroundColor="#2A2A2A" Margin="0,0,0,12" Padding="15" StrokeThickness="0">
                         <Border.StrokeShape><RoundRectangle CornerRadius="14" /></Border.StrokeShape>
-                        <Border.GestureRecognizers><TapGestureRecognizer Tapped="OnSongTapped" CommandParameter="{Binding .}" /></Border.GestureRecognizers>
                         <Grid ColumnDefinitions="Auto, *">
                             <Image Source="{Binding SongImage}" WidthRequest="45" HeightRequest="45" Aspect="AspectFill" Margin="0,0,15,0" />
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">

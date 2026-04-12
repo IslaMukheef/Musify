@@ -2,31 +2,27 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Musify.Models;
-using Musify.Services; 
 
 namespace Musify.ViewModels;
 
 /// <summary>
-/// Manages the logic for selecting and playing local audio files.
+/// Manages the logic for selecting local audio files and pushing them to the global library.
 /// </summary>
 public class LocalViewModel : INotifyPropertyChanged
 {
+    private LibraryData _library;
     public ObservableCollection<Song> PickedSongs { get; set; } = new();
 
     /// <summary>
-    /// Sends the selected song to the MediaHelper for playback.
+    /// Initializes the ViewModel with a specific LibraryData instance.
     /// </summary>
-    /// <param name="song">The song object to be played.</param>
-    public void PlaySong(Song? song)
+    public LocalViewModel(LibraryData library)
     {
-        if (song != null)
-        {
-            MediaHelper.Play(song.LocalPath);
-        }
+        _library = library;
     }
     
     /// <summary>
-    /// Opens the system file picker to select MP3 files and adds them to the local collection.
+    /// Opens the system file picker to select MP3 files and adds them to the global library collection.
     /// </summary>
     public async Task PickMusicFiles()
     {
@@ -45,12 +41,10 @@ public class LocalViewModel : INotifyPropertyChanged
                 FileTypes = audioFileType
             });
 
-            
             if (results != null)
             {
                 foreach (var file in results)
                 {
-                    // Replaced 'null' with 'string.Empty' to match the non-nullable Song constructor
                     var newSong = new Song(
                         file.FileName, 
                         "Local Artist", 
@@ -62,7 +56,11 @@ public class LocalViewModel : INotifyPropertyChanged
                         "dotnet_bot.png" 
                     );
                     
+                    // Add to the local UI list for immediate feedback
                     PickedSongs.Add(newSong);
+
+                    // NEW LOGIC: Pushing the song to the shared Library so it shows up globally
+                    _library.Songs.Add(newSong);
                 }
             }
         }

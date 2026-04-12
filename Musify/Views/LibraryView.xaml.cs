@@ -13,11 +13,13 @@ public partial class LibraryView : ContentPage
     }
 
     // trigger when user clicks on an uploaded song
-    private void OnSongTapped(object sender, TappedEventArgs e)
+    private async void OnSongTapped(object sender, TappedEventArgs e)
     {
         if (sender is Grid tappedGrid && tappedGrid.BindingContext is Song selectedSong)
         {
             MediaService.Play(selectedSong);
+            
+            await Navigation.PushAsync(new SongPlayerView(selectedSong));
         }
     }
 

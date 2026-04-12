@@ -30,7 +30,7 @@
                             <Image Source="{Binding SongImage}" WidthRequest="45" HeightRequest="45" Aspect="AspectFill" Margin="0,0,15,0" />
                             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
                                 <Label Text="{Binding Title}" TextColor="White" FontSize="16" FontAttributes="Bold" />
-                                <Label Text="Ready to Import" TextColor="#B8B8B8" FontSize="12" />
+                                <Label Text="Imported to Library" TextColor="#B8B8B8" FontSize="12" />
                             </VerticalStackLayout>
                         </Grid>
                     </Border>

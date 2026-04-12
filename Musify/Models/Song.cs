@@ -2,8 +2,6 @@ using System;
 
 namespace Musify.Models
 {
-
-    
     public class Song
     {
         //ISLA: We need to add song image so I added this but you can change it to something else but Please keep the getter and setter as SongImage
@@ -22,7 +20,7 @@ namespace Musify.Models
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    _songImage = "dotnet_bot.png";
+                    _songImage = "local_background.png";
                 _songImage = value;
             }
         }

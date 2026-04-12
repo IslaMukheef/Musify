@@ -62,11 +62,11 @@
                           ColumnSpacing="14">
                         <VerticalStackLayout x:Name="ChillMixCard"
                                              Grid.Column="0"
-                                             Spacing="8">
+                                             Spacing="4">
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
-                                    HeightRequest="140">
-                                <Border.StrokeShape>
+                                    HeightRequest="140"
+                                    Margin="0,0,0,4"> <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
                             </Border>
@@ -83,10 +83,11 @@
 
                         <VerticalStackLayout x:Name="TopTracksCard"
                                              Grid.Column="1"
-                                             Spacing="8">
+                                             Spacing="4">
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
-                                    HeightRequest="140">
+                                    HeightRequest="140"
+                                    Margin="0,0,0,4">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
@@ -115,10 +116,11 @@
                           ColumnSpacing="14">
                         <VerticalStackLayout x:Name="WorkoutPlaylistCard"
                                              Grid.Column="0"
-                                             Spacing="8">
+                                             Spacing="4">
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
-                                    HeightRequest="140">
+                                    HeightRequest="140"
+                                    Margin="0,0,0,4">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
@@ -136,10 +138,11 @@
 
                         <VerticalStackLayout x:Name="LateNightMixCard"
                                              Grid.Column="1"
-                                             Spacing="8">
+                                             Spacing="4">
                             <Border BackgroundColor="#5B5B5B"
                                     StrokeThickness="0"
-                                    HeightRequest="140">
+                                    HeightRequest="140"
+                                    Margin="0,0,0,4">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="14" />
                                 </Border.StrokeShape>
@@ -158,7 +161,7 @@
                 </VerticalStackLayout>
             </VerticalStackLayout>
         </ScrollView>
-        
+
         <toolkit:MediaElement x:Name="GlobalMediaElement" 
                               ShouldAutoPlay="True" 
                               ShouldShowPlaybackControls="False"

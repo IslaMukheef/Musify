@@ -1,10 +1,24 @@
+using System.Collections.ObjectModel;
+using Musify.DataAccess;
+using Musify.Models;
+
 namespace Musify.Views;
 
 public partial class Search : ContentPage
 {
+    private readonly List<Song> _allSongs;
+    private readonly ObservableCollection<Song> _filteredSongs;
+
     public Search()
     {
         InitializeComponent();
+
+        SeedDataManager manager = new SeedDataManager();
+        LibraryData data = manager.ReadSeedData();
+        _allSongs = new List<Song>(data.Songs);
+        _filteredSongs = new ObservableCollection<Song>();
+
+        BindableLayout.SetItemsSource(ResultsList, _filteredSongs);
     }
 
     private void OnPageLoaded(object? sender, EventArgs e)
@@ -30,6 +44,7 @@ public partial class Search : ContentPage
 
     private void OnSearchTextChanged(object? sender, TextChangedEventArgs e)
     {
+        UpdateFilteredSongs();
         UpdateSearchLabel();
     }
 
@@ -41,5 +56,29 @@ public partial class Search : ContentPage
         }
 
         SearchInputBar.Text = button.Text;
+    }
+
+    private void UpdateFilteredSongs()
+    {
+        string searchText = SearchInputBar.Text?.Trim() ?? string.Empty;
+
+        _filteredSongs.Clear();
+
+        if (searchText == string.Empty)
+        {
+            return;
+        }
+
+        foreach (Song song in _allSongs)
+        {
+            bool matchesTitle = song.Title.Contains(searchText, StringComparison.OrdinalIgnoreCase);
+            bool matchesArtist = song.ArtistName.Contains(searchText, StringComparison.OrdinalIgnoreCase);
+            bool matchesAlbum = song.AlbumName.Contains(searchText, StringComparison.OrdinalIgnoreCase);
+
+            if (matchesTitle || matchesArtist || matchesAlbum)
+            {
+                _filteredSongs.Add(song);
+            }
+        }
     }
 }

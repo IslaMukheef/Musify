@@ -9,7 +9,30 @@
 
     <Grid RowDefinitions="Auto, *, Auto, Auto, Auto" Padding="20,48,20,10">
         
-        <Label Grid.Row="0" Text="Playlists" TextColor="White" FontSize="28" FontAttributes="Bold" Margin="0,0,0,10"/>
+        <Grid Grid.Row="0" ColumnDefinitions="*, Auto, Auto" VerticalOptions="Center" Margin="0,0,0,10">
+            <Label Text="Playlists" 
+                   TextColor="White" 
+                   FontSize="28" 
+                   FontAttributes="Bold" 
+                   VerticalOptions="Center"/>
+            
+            <ImageButton Grid.Column="1"
+                         Source="plus_icon.png"
+                         Clicked="OnNewClicked"
+                         WidthRequest="32"
+                         HeightRequest="32"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="Center"
+                         Margin="0,0,10,0"/>
+
+            <ImageButton Grid.Column="2"
+                         Source="edit_icon.png" Clicked="OnPlayListEditClicked"
+                         WidthRequest="32"
+                         HeightRequest="32"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="Center">
+            </ImageButton>
+        </Grid>
 
         <CollectionView Grid.Row="1" ItemsSource="{Binding playlist}" SelectionMode="Single" SelectedItem="{Binding SelectedPlaylist, Mode=TwoWay}" Margin="0,0,0,10">
             <CollectionView.ItemTemplate>
@@ -76,9 +99,6 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <HorizontalStackLayout Grid.Row="4" HorizontalOptions="Center" Spacing="20" Padding="0,10">
-            <Button Text="New" Clicked="OnNewClicked" WidthRequest="100" HeightRequest="45" BackgroundColor="{StaticResource Magenta}" TextColor="White" CornerRadius="14"/>
-            <Button Text="Edit" Clicked="OnPlayListEditClicked" WidthRequest="100" HeightRequest="45" BackgroundColor="{StaticResource Magenta}" TextColor="White" CornerRadius="14"/>
-        </HorizontalStackLayout>
+        <ContentView Grid.Row="4" />
     </Grid>
 </ContentPage>

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Musify.ViewModels"
              x:Class="Musify.Views.Search"
              Title="Search"
              BackgroundColor="#121212"
              Loaded="OnPageLoaded"
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewModels:SearchViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="20,48,20,20"
@@ -18,6 +23,7 @@
                            BackgroundColor="#121212"
                            TextColor="White"
                            PlaceholderColor="#8C8C8C"
+                           Text="{Binding SearchText}"
                            TextChanged="OnSearchTextChanged"
                            HorizontalOptions="Fill" />
 
@@ -34,9 +40,11 @@
             <Label x:Name="SearchSectionLabel"
                    Text="Suggestions"
                    TextColor="White"
-                   FontSize="18" />
+                   FontSize="18"
+                   IsVisible="{Binding ShowSuggestions}" />
 
             <VerticalStackLayout x:Name="SuggestionList"
+                                 IsVisible="{Binding ShowSuggestions}"
                                  Spacing="12">
                 <Button Text="Michael Jackson"
                         Clicked="OnSuggestionClicked"
@@ -64,8 +72,9 @@
             </VerticalStackLayout>
 
             <VerticalStackLayout x:Name="ResultsList"
+                                 BindableLayout.ItemsSource="{Binding FilteredSongs}"
                                  Spacing="12"
-                                 IsVisible="False">
+                                 IsVisible="{Binding ShowResults}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <Border BackgroundColor="#332433"
@@ -115,7 +124,7 @@
                    Text="No results found."
                    TextColor="#B8B8B8"
                    FontSize="16"
-                   IsVisible="False" />
+                   IsVisible="{Binding ShowNoResults}" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

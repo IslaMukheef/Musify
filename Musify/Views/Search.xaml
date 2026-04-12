@@ -32,7 +32,7 @@
             </Grid>
 
             <Label x:Name="SearchSectionLabel"
-                   Text="Explore"
+                   Text="Suggestions"
                    TextColor="White"
                    FontSize="18" />
 
@@ -74,6 +74,9 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="14" />
                             </Border.StrokeShape>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnResultTapped" />
+                            </Border.GestureRecognizers>
 
                             <Grid ColumnDefinitions="Auto,*"
                                   ColumnSpacing="12">

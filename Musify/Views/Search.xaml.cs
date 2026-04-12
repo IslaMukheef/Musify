@@ -1,6 +1,7 @@
 using System.Collections.ObjectModel;
 using Musify.DataAccess;
 using Musify.Models;
+using Musify.Services;
 
 namespace Musify.Views;
 
@@ -37,7 +38,7 @@ public partial class Search : ContentPage
         bool hasQuery = !string.IsNullOrWhiteSpace(SearchInputBar.Text);
         bool hasResults = _filteredSongs.Count > 0;
 
-        SearchSectionLabel.Text = "Explore";
+        SearchSectionLabel.Text = "Suggestions";
         SearchSectionLabel.IsVisible = !hasQuery;
         SuggestionList.IsVisible = !hasQuery;
         ResultsList.IsVisible = hasQuery && hasResults;
@@ -58,6 +59,17 @@ public partial class Search : ContentPage
         }
 
         SearchInputBar.Text = button.Text;
+    }
+
+    private async void OnResultTapped(object? sender, TappedEventArgs e)
+    {
+        if (sender is not Border tappedBorder || tappedBorder.BindingContext is not Song selectedSong)
+        {
+            return;
+        }
+
+        MediaService.Play(selectedSong);
+        await Navigation.PushAsync(new SongPlayerView(selectedSong));
     }
 
     private void UpdateFilteredSongs()

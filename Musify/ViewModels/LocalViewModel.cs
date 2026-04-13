@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Musify.Models;
+using Musify.DataAccess;
 
 namespace Musify.ViewModels;
 
@@ -77,8 +78,6 @@ public class LocalViewModel : INotifyPropertyChanged
 
             if (results != null && results.Any())
             {
-                // We no longer Clear() here so the "upload history" stays visible
-
                 foreach (var file in results)
                 {
                     // Clean title by removing file extensions (e.g., .mp3)
@@ -95,7 +94,7 @@ public class LocalViewModel : INotifyPropertyChanged
                         }
                     }
 
-                    // Only add the song if it's not already there
+                    // Only adds the song if it's not already there
                     if (alreadyInLibrary == false)
                     {
                         var newSong = new Song(
@@ -121,7 +120,13 @@ public class LocalViewModel : INotifyPropertyChanged
                     }
                 }
 
-                // --- FIXED STATUS MESSAGE LOGIC ---
+                // Save the library to disk so it persists after restart
+                if (LastNewCount > 0)
+                {
+                    PersistenceService.SaveLibrary(_library);
+                }
+
+                // STATUS MESSAGE LOGIC
                 if (LastNewCount > 0 && LastDupeCount > 0)
                 {
                     StatusMessage = $"Added {LastNewCount} songs ({LastDupeCount} duplicates skipped)";

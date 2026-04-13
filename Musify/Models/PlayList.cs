@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Musify.Models
 {
@@ -15,7 +16,8 @@ namespace Musify.Models
         // will store either the artist name or the person who created the playlist
         public string CreatorName { get; set; }
         public ObservableCollection<Song> Songs { get; set; }
-
+        
+        [JsonConstructor]
         public PlayList(string playlistName, int playlistID,string playListImage, string creatorName)
         {
             PlayListName = playlistName;

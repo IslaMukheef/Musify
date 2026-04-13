@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Text.Json.Serialization;
 
 namespace Musify.Models
 {

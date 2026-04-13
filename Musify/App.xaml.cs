@@ -12,9 +12,19 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        // Load Jose's seeded data into the shared instance immediately
-        var manager = new SeedDataManager();
-        SharedLibrary = manager.ReadSeedData();
+        // Check if there is a saved library from previous sessions
+        var savedData = PersistenceService.LoadLibrary();
+
+        if (savedData != null)
+        {
+            SharedLibrary = savedData;
+        }
+        else
+        {
+            // Load Jose's seeded data into the shared instance immediately
+            var manager = new SeedDataManager();
+            SharedLibrary = manager.ReadSeedData();
+        }
     }
 
     protected override Window CreateWindow(IActivationState? activationState)

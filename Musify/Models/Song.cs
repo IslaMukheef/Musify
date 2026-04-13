@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace Musify.Models
 {
@@ -21,10 +22,12 @@ namespace Musify.Models
             {
                 if (string.IsNullOrEmpty(value))
                     _songImage = "local_background.png";
-                _songImage = value;
+                else
+                    _songImage = value;
             }
         }
-
+        
+        [JsonConstructor]
         public Song(string title, string artistName, string albumName, string artworkUrl, string localPath, string previewUrl, int durationMs, string songImage)
         {
             SongId = Guid.NewGuid();

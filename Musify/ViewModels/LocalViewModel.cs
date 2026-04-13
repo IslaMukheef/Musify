@@ -13,6 +13,10 @@ public class LocalViewModel : INotifyPropertyChanged
     private LibraryData _library;
     private string _statusMessage = "No files selected";
 
+    // New properties to help the View show alerts
+    public int LastNewCount { get; private set; }
+    public int LastDupeCount { get; private set; }
+
     /// <summary>
     /// Gets the collection of songs picked
     /// during the current session for UI feedback
@@ -51,6 +55,10 @@ public class LocalViewModel : INotifyPropertyChanged
     {
         try
         {
+            // Reset counters for the new pick session
+            LastNewCount = 0;
+            LastDupeCount = 0;
+
             // Defines supported audio types for cross-platform compatibility
             var audioFileType = new FilePickerFileType(
                 new Dictionary<DevicePlatform, IEnumerable<string>>
@@ -69,31 +77,63 @@ public class LocalViewModel : INotifyPropertyChanged
 
             if (results != null && results.Any())
             {
-                // Clear current session list before new imports
-                PickedSongs.Clear();
+                // We no longer Clear() here so the "upload history" stays visible
 
                 foreach (var file in results)
                 {
                     // Clean title by removing file extensions (e.g., .mp3)
                     var cleanTitle = Path.GetFileNameWithoutExtension(file.FileName);
 
-                    var newSong = new Song(
-                        cleanTitle,
-                        "Local Artist",
-                        "Local Album",
-                        string.Empty,
-                        file.FullPath,
-                        string.Empty,
-                        0,
-                        "local_background.png"
-                    );
-                    
-                    // Sync with UI list and the global data store
-                    PickedSongs.Add(newSong);
-                    _library.Songs.Add(newSong);
+                    // Check if this song title already exists in the global library (case-insensitive)
+                    bool alreadyInLibrary = false;
+                    foreach (var existingSong in _library.Songs)
+                    {
+                        if (existingSong.Title.ToLower() == cleanTitle.ToLower())
+                        {
+                            alreadyInLibrary = true;
+                            break;
+                        }
+                    }
+
+                    // Only add the song if it's not already there
+                    if (alreadyInLibrary == false)
+                    {
+                        var newSong = new Song(
+                            cleanTitle,
+                            "Local Artist",
+                            "Local Album",
+                            string.Empty,
+                            file.FullPath,
+                            string.Empty,
+                            0,
+                            "local_background.png"
+                        );
+                        
+                        // Sync with UI list and the global data store
+                        PickedSongs.Add(newSong);
+                        _library.Songs.Add(newSong);
+                        LastNewCount++;
+                    }
+                    else
+                    {
+                        // Track how many were actually skipped
+                        LastDupeCount++;
+                    }
                 }
 
-                StatusMessage = $"{results.Count()} songs imported to library";
+                // --- FIXED STATUS MESSAGE LOGIC ---
+                if (LastNewCount > 0 && LastDupeCount > 0)
+                {
+                    StatusMessage = $"Added {LastNewCount} songs ({LastDupeCount} duplicates skipped)";
+                }
+                else if (LastNewCount > 0)
+                {
+                    StatusMessage = $"Successfully imported {LastNewCount} new songs!";
+                }
+                else if (LastDupeCount > 0)
+                {
+                    StatusMessage = "All files were already in your library.";
+                }
             }
         }
         catch (Exception ex)

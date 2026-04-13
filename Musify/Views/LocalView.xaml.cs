@@ -30,6 +30,23 @@ public partial class LocalView : ContentPage
             await button.ScaleTo(0.85, 80, Easing.CubicOut);
             await button.ScaleTo(1.0, 80, Easing.CubicIn);
         }
+
+        // Run the pick logic
         await _viewModel.PickMusicFiles();
+
+        // Check the results to show the right alert
+        if (_viewModel.LastNewCount > 0)
+        {
+            string alertMsg = _viewModel.LastDupeCount > 0 
+                ? $"Added {_viewModel.LastNewCount} songs. Skipped {_viewModel.LastDupeCount} duplicates." 
+                : $"Successfully added {_viewModel.LastNewCount} songs!";
+
+            await DisplayAlertAsync("Success", alertMsg, "Sweet");
+        }
+        else if (_viewModel.LastDupeCount > 0)
+        {
+            // This triggers if ONLY duplicates were picked
+            await DisplayAlertAsync("Already In Library", "The files you selected are already in your library.", "OK");
+        }
     }
 }
